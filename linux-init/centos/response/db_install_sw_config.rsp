@@ -135,7 +135,7 @@ oracle.install.db.config.starterdb.type=GENERAL_PURPOSE
 #-------------------------------------------------------------------------------
 # Global Database Name 
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.globalDBName=orcl
+oracle.install.db.config.starterdb.globalDBName=orcl11g
 
 #-------------------------------------------------------------------------------
 # The Starter Database SID 
