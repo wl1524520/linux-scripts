@@ -1,4 +1,4 @@
-echo "127.0.0.1 oracle" >> /etc/hosts
+echo "127.0.0.1 `hostname`" >> /etc/hosts
 
 cat conf/set_kernel.conf >> /etc/sysctl.conf
 modprobe bridge

@@ -1,6 +1,6 @@
 # Oracle 11g r2 config
-export ORACLE_SID=wilson
-export ORACLE_UNQNAME=wilson
+export ORACLE_SID=orcl11g
+export ORACLE_UNQNAME=orcl11g
 export ORACLE_BASE=/home/oracle/oracle_base
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:ORACLE_HOME/lib
 export ORACLE_HOME=/home/oracle/oracle_base/product/11.2.0/dbhome_1
