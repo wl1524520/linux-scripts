@@ -18,5 +18,7 @@ yum install -y libstdc++.i686 libstdc++.x86_64
 yum install -y libstdc++-devel.i686 libstdc++-devel.x86_64
 yum install -y libaio.i686 libaio.x86_64
 yum install -y libaio-devel.i686 libaio-devel.x86_64
+yum install -y elfutils-libelf-devel
 
-yum install -y unixODBC unixODBC-devel
+yum install -y unixODBC-devel.i686 unixODBC-devel.x86_64
+yum install -y unixODBC.i686 unixODBC.x86_64
