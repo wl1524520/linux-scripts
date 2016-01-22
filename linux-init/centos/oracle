@@ -23,7 +23,7 @@ case "$1" in
         echo "-------------------------------------------------" >> /var/log/oracle.log
         date +" %T %a %D : Starting Oracle Databases as part of system up." >> /var/log/oracle.log
         echo "-------------------------------------------------" >> /var/log/oracle.log
-        su - $ORA_OWNER -c "$ORA_HOME/bin/dbstart" >>/var/log/oracle.log
+        su - $ORA_OWNER -c "$ORA_HOME/bin/dbstart $ORA_HOME" >>/var/log/oracle.log
         echo "Done"
         # Start the Listener:
         echo "Starting Oracle Listeners ... "
@@ -32,6 +32,13 @@ case "$1" in
         echo "-------------------------------------------------" >> /var/log/oracle.log
         su - $ORA_OWNER -c "$ORA_HOME/bin/lsnrctl start" >>/var/log/oracle.log
         echo "Done."
+        # Start the EM:
+        echo "-------------------------------------------------" >> /var/log/oracle.log
+        date +" %T %a %D : Finished." >> /var/log/oracle.log
+        echo "Starting Oracle EM ... "
+        echo "-------------------------------------------------" >> /var/log/oracle.log
+        su - $ORA_OWNER -c "$ORA_HOME/bin/emctl start dbconsole" >>/var/log/oracle.log
+        echo "Done."
         echo "-------------------------------------------------" >> /var/log/oracle.log
         date +" %T %a %D : Finished." >> /var/log/oracle.log
         echo "-------------------------------------------------" >> /var/log/oracle.log
@@ -39,6 +46,13 @@ case "$1" in
         ;;
 
         'stop')
+        # Stop the Oracle EM:
+        echo "Stoping Oracle EM ... "
+        echo "-------------------------------------------------" >> /var/log/oracle.log
+        date +" %T %a %D : Stoping Oracle EM as part of system down." >> /var/log/oracle.log
+        echo "-------------------------------------------------" >> /var/log/oracle.log
+        su - $ORA_OWNER -c "$ORA_HOME/bin/emctl stop dbconsole" >> /var/log/oracle.log
+        echo "Done."
         # Stop the Oracle Listener:
         echo "Stoping Oracle Listeners ... "
         echo "-------------------------------------------------" >> /var/log/oracle.log
@@ -52,7 +66,7 @@ case "$1" in
         echo "-------------------------------------------------" >> /var/log/oracle.log
         date +" %T %a %D : Stoping Oracle Databases as part of system down." >> /var/log/oracle.log
         echo "-------------------------------------------------" >> /var/log/oracle.log
-        su - $ORA_OWNER -c "$ORA_HOME/bin/dbshut" >>/var/log/oracle.log
+        su - $ORA_OWNER -c "$ORA_HOME/bin/dbshut $ORA_HOME" >>/var/log/oracle.log
         echo "Done."
         echo ""
         echo "-------------------------------------------------" >> /var/log/oracle.log
