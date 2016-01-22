@@ -178,19 +178,19 @@ oracle.install.db.config.starterdb.installExampleSchemas=false
 oracle.install.db.config.starterdb.enableSecuritySettings=false
 
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.ALL=
+oracle.install.db.config.starterdb.password.ALL=Kxc2016ynkm
 
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.SYS=
+oracle.install.db.config.starterdb.password.SYS=Kxc2016ynkm
 
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.SYSTEM=
+oracle.install.db.config.starterdb.password.SYSTEM=Kxc2016ynkm
 
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.SYSMAN=
+oracle.install.db.config.starterdb.password.SYSMAN=Kxc2016ynkm
 
 #-------------------------------------------------------------------------------
-oracle.install.db.config.starterdb.password.DBSNMP=
+oracle.install.db.config.starterdb.password.DBSNMP=Kxc2016ynkm
 
 #-------------------------------------------------------------------------------
 # Can be one of the following 
