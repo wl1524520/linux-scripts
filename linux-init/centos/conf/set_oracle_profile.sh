@@ -1,3 +1,4 @@
+# Oracle 11g r2 config
 export ORACLE_SID=wilson
 export ORACLE_UNQNAME=wilson
 export ORACLE_BASE=/home/oracle/oracle_base
