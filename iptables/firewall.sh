@@ -3,9 +3,23 @@
 ############################################
 # ssh OpenVPN ntp icmp mysql ddos
 ############################################
-SERVER_IP="xxx.xxx.xxx.xxx"
+#SERVER_IP="xxx.xxx.xxx.xxx"
+SERVER_IP=""
 SERVER_DEV="eth1"
 VPN_NET="10.8.0.0/24"
+
+function echo_red()
+{
+    echo -e "\033[31m$*\033[0m"
+    #echo -ne "\033[31m"
+    #echo $1
+    #echo -ne "\033[0m"
+}
+
+if [ -z "$SERVER_IP" ]; then
+    echo_red "Variable SERVER_IP is null, Please set it first !"
+    exit 1
+fi
 
 # Flush all rules
 sudo iptables -F
