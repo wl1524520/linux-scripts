@@ -16,10 +16,20 @@ function echo_red()
     #echo -ne "\033[0m"
 }
 
+# Get Server's public ip
+ip=`curl ifconfig.me 2> /dev/null`
+if [ $? -eq 0 ]; then
+    SERVER_IP=$ip
+else
+    SERVER_IP=""
+fi
+
 if [ -z "$SERVER_IP" ]; then
     echo_red "Variable SERVER_IP is null, Please set it first !"
     exit 1
 fi
+
+echo $SERVER_IP
 
 # Flush all rules
 sudo iptables -F
