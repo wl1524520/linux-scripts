@@ -1,7 +1,7 @@
 #Linux系统安装初始化脚本
 ##1. CentOS 7.x 系列
 * [脚本功能](#dot)
-    * 更新系统
+    * 更新系统到最新
     * 安装 wget
     * 安装 net-tools
     * 安装 git
@@ -19,6 +19,17 @@ sh -c "$(wget https://raw.githubusercontent.com/wl1524520/linux-scripts/master/l
 ```
 
 ##2. Deepin 2015 系列
+* [脚本功能](#dot)
+    * 更新系统到最新
+    * 安装 git
+    * 安装 filezilla
+    * 安装 vlc
+    * 安装 vim
+    * 安装谷歌字体和文泉驿字体
+    * 安装fcitx框架以及安装谷歌拼音和五笔输入法
+    * 安装GIMP
+    * 安装并设置zsh
+
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/wl1524520/linux-scripts/master/linux-init/deepin2015.sh)"
 ```
