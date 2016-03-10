@@ -1,5 +1,15 @@
 #Linux系统安装初始化脚本
 ##1. CentOS 7.x 系列
+* [脚本功能](#dot)
+    * 更新系统
+    * 安装 wget
+    * 安装 net-tools
+    * 安装 git
+    * 安装 vim
+    * 关闭并删除kdump
+    * 设置vim的别名:alias vi=vim
+    * 关闭SELINUX
+
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/wl1524520/linux-scripts/master/linux-init/centos7.sh)"
 ```
