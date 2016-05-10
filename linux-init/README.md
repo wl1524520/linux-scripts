@@ -44,3 +44,13 @@ sh -c "$(wget https://raw.githubusercontent.com/wl1524520/linux-scripts/master/l
 git clone https://github.com/wl1524520/linux-scripts.git
 ```
 然后切换到 linux-scripts/linux-init/mint 目录
+
+#4. Gentoo Linux - Server
+* [脚本功能](#dot)
+    * 更新系统到最新
+    * 安装 git
+    * 安装 zsh
+    * 安装 vim
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/wl1524520/linux-scripts/master/linux-init/gentoo/server/init-server.sh)"
+```
