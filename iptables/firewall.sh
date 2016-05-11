@@ -4,7 +4,7 @@
 # ssh OpenVPN ntp icmp mysql ddos
 ############################################
 #SERVER_IP="xxx.xxx.xxx.xxx"
-SERVER_IP=""
+SERVER_IP="123.57.66.95"
 SERVER_DEV="eth1"
 VPN_NET="10.8.0.0/24"
 
@@ -17,12 +17,15 @@ function echo_red()
 }
 
 # Get Server's public ip
-ip=`curl ifconfig.me 2> /dev/null`
-if [ $? -eq 0 ]; then
-    SERVER_IP=$ip
-else
-    SERVER_IP=""
-fi
+function get_server_ip()
+{
+    ip=`curl ifconfig.me 2> /dev/null`
+    if [ $? -eq 0 ]; then
+        SERVER_IP=$ip
+    else
+        SERVER_IP=""
+    fi
+}
 
 if [ -z "$SERVER_IP" ]; then
     echo_red "Variable SERVER_IP is null, Please set it first !"
@@ -110,8 +113,16 @@ sudo iptables -A OUTPUT -p tcp --dport 3306 -m state --state NEW,ESTABLISHED -j 
 sudo iptables -A INPUT  -p tcp --sport 3306 -m state --state ESTABLISHED     -j ACCEPT
 
 # sendmail service
-sudo iptables -A OUTPUT -p tcp --dport 25 -j ACCEPT
-sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+#sudo iptables -A OUTPUT -p tcp --dport 25 -j ACCEPT
+#sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# SMTP Port
+sudo iptables -A INPUT  -p tcp --dport 465 -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --dport 465 -j ACCEPT
+
+# Allow 192.168.42.0/24 访问
+sudo iptables -A INPUT -s 192.168.42.0/24 -j ACCEPT
+sudo iptables -A OUTPUT -d 192.168.42.0/24 -j ACCEPT
 
 # Drop everything that doesn't match the above
 sudo iptables -A INPUT   -j DROP
