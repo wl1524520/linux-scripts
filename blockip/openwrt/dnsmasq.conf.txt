@@ -1,0 +1,15 @@
+# block list
+address=/.360.cn/127.0.0.1
+address=/.360.com/127.0.0.1
+address=/.360safe.com/127.0.0.1
+address=/.rising.com.cn/127.0.0.1
+address=/.rising.cn/127.0.0.1
+address=/.ijinshan.com/127.0.0.1
+address=/.duba.com/127.0.0.1
+address=/.duba.net/127.0.0.1
+address=/.duba.cn/127.0.0.1
+address=/.liebao.cn/127.0.0.1
+address=/.sougou.com/127.0.0.1
+address=/.wps.cn/127.0.0.1
+address=/.wps.com/127.0.0.1
+address=/.sogou.com/127.0.0.1
