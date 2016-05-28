@@ -23,7 +23,8 @@ pacman -Sy vim openssh sudo
 
 # enable service
 systemctl enable sshd.service
-systemctl enable dhcpcd.service
+#systemctl enable dhcpcd.service
 
-# set internet dhcp
-#cp /root/ethernet-dhcp /etc/netctl/enp0s3
+# set ip
+cp /root/ethernet-static /etc/netctl/enp0s3
+netctl enable enp0s3

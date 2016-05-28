@@ -44,4 +44,5 @@ genfstab -U -p /mnt >> /mnt/etc/fstab
 cp 02_install.sh /mnt/root/
 cp locale.gen /mnt/root/
 cp ethernet-dhcp /mnt/root/
+cp ethernet-static /mnt/root/
 echo 'run "arch-chroot /mnt /bin/bash"'
