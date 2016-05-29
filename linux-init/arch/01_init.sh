@@ -45,4 +45,7 @@ cp 02_install.sh /mnt/root/
 cp locale.gen /mnt/root/
 cp ethernet-dhcp /mnt/root/
 cp ethernet-static /mnt/root/
+cp cinnamon.sh /mnt/root/
+chmod 755 /mnt/root/*.sh
+
 echo 'run "arch-chroot /mnt /bin/bash"'
