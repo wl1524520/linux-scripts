@@ -25,6 +25,6 @@ pacman -Sy vim openssh sudo
 systemctl enable sshd.service
 #systemctl enable dhcpcd.service
 
-# set ip
-cp /root/ethernet-static /etc/netctl/enp0s3
-netctl enable enp0s3
+# set static ip
+#cp /root/ethernet-static /etc/netctl/enp0s3
+#netctl enable enp0s3
