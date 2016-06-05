@@ -8,10 +8,10 @@ env-update && source /etc/profile
 
 # Install cinnamon
 emerge --ask gnome-extra/cinnamon
+emerge --ask elementary-xfce-icon-theme
 
-# Troubleshooting
-#emerge --ask gnome-extra/gnome-tweak-tool
-#emerge --ask gnome-extra/gnome-shell-extensions
+systemctl disable dhcpcd.service
+systemctl enable NetworkManager
 
 # Install Google Noto Fonts
 emerge --ask media-fonts/noto
