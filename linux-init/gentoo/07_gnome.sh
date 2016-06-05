@@ -15,6 +15,7 @@ systemctl enable NetworkManager
 
 # Install Google Noto Fonts
 emerge --ask media-fonts/noto
+emerge --ask wqy-zenhei wqy-microhei
 
 useradd -m wilson
 passwd wilson
