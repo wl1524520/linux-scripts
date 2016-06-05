@@ -1,36 +1,27 @@
 #!/bin/bash
 
+cp etc/portage/package.accept_keywords /etc/portage/
+emerge --ask sys-kernel/dracut
+echo 'add_dracutmodules+="usrmount"' > /etc/dracut/dracut.conf
+
 emerge --ask sys-apps/pciutils
 emerge --ask sys-kernel/gentoo-sources
-cp gentoo.config /usr/src/linux/.config
-
-echo "make && make modules_install && make install"
-
-echo "mkdir -p /boot/efi/boot"
-echo "cp /boot/vmlinuz-* /boot/efi/boot/bootx64.efi"
 
 #emerge --ask sys-kernel/genkernel
+# Install genkernel for systemd
 emerge --ask sys-kernel/genkernel-next
+cat etc/genkernel.conf > /etc/genkernel.conf
+
+# Kernel config file
+cp gentoo.config /usr/src/linux/.config
+
+# build and install linux kernel
+cd /usr/src/linux && make && make modules_install && make install
+
+# set efi boot
+mkdir -p /boot/efi/boot
+cp /boot/vmlinuz-* /boot/efi/boot/bootx64.efi
+
+# Install initramfs
 genkernel --install initramfs
 
-cat etc/fstab > /etc/fstab
-echo "gentoo" > /etc/hostname
-
-emerge --ask --noreplace net-misc/netifrc
-
-# install some service
-emerge --ask app-admin/sysklogd
-rc-update add sysklogd default
-
-emerge --ask sys-process/cronie
-rc-update add cronie default
-crontab /etc/crontab
-
-emerge --ask sys-apps/mlocate
-rc-update add sshd default
-
-emerge --ask net-misc/dhcpcd
-
-emerge --ask sys-boot/grub:2
-grub2-install /dev/sda
-grub2-mkconfig -o /boot/grub/grub.cfg

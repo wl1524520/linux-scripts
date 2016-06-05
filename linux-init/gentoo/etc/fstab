@@ -14,8 +14,8 @@
 # <fs>			<mountpoint>	<type>		<opts>		<dump/pass>
 
 # NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
-/dev/sda2		/boot		ext2		defaults	0 2
-/dev/sda4		/		ext4		noatime		0 1
-/dev/sda3		none		swap		sw		0 0
+/dev/sda2		/boot		ext2		defaults,noatime	0 2
+/dev/sda3		none		swap		sw		            0 0
+/dev/sda4		/		    ext4		noatime		        0 1
 #/dev/cdrom		/mnt/cdrom	auto		noauto,ro	0 0
 #/dev/fd0		/mnt/floppy	auto		noauto		0 0

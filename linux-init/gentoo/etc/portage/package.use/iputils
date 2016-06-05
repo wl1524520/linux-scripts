@@ -1,20 +1,2 @@
 net-misc/iputils -caps -filecaps
 net-print/cups -usb
-# required by gnome-extra/gnome-user-share-3.18.0::gentoo
-# required by gnome-base/gnome-extra-apps-3.18.0::gentoo[share]
-# required by gnome-base/gnome-3.18.0::gentoo[extras]
-# required by gnome-base/gnome (argument)
->=www-servers/apache-2.4.20 apache2_mpms_prefork
-# required by gnome-base/gnome-shell-3.18.3::gentoo
-# required by gnome-base/gdm-3.18.2::gentoo
-# required by gnome-base/gnome-3.18.0::gentoo
-# required by gnome-base/gnome (argument)
->=gnome-base/gnome-control-center-3.18.2 networkmanager
-# required by media-gfx/gnome-photos-3.18.3-r1::gentoo
-# required by gnome-base/gnome-extra-apps-3.18.0::gentoo[tracker]
-# required by gnome-base/gnome-3.18.0::gentoo[extras]
-# required by gnome-base/gnome (argument)
->=media-plugins/grilo-plugins-0.2.17 upnp-av
-# required by media-video/vlc-2.2.1-r1::gentoo
-# required by vlc (argument)
->=sys-libs/zlib-1.2.8-r1 minizip
