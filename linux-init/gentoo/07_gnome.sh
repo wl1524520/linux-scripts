@@ -10,9 +10,18 @@ env-update && source /etc/profile
 emerge --ask gnome-extra/cinnamon
 
 # Troubleshooting
-emerge --ask gnome-extra/gnome-tweak-tool
-emerge --ask gnome-extra/gnome-shell-extensions
+#emerge --ask gnome-extra/gnome-tweak-tool
+#emerge --ask gnome-extra/gnome-shell-extensions
 
 # Install Google Noto Fonts
 emerge --ask media-fonts/noto
 
+useradd -m wilson
+passwd wilson
+gpasswd -a wilson wheel
+gpasswd -a wilson audio
+gpasswd -a wilson cdrom
+gpasswd -a wilson video
+gpasswd -a wilson usb
+gpasswd -a wilson portage
+gpasswd -a wilson plugdev
