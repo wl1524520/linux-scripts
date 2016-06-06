@@ -43,7 +43,8 @@ grub2-mkconfig -o /boot/grub/grub.cfg
 cp etc/profile.d/alias.sh /mnt/gentoo/etc/profile.d
 
 # some packages
-emerge --ask app-admin/sudo
-emerge --ask app-editors/vim
-emerge --ask app-shells/zsh
-emerge --ask dev-vcs/git
+emerge --ask \
+    app-admin/sudo \
+    app-editors/vim \
+    app-shells/zsh \
+    dev-vcs/git
