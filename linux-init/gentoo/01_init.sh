@@ -24,8 +24,9 @@ mkdir /mnt/gentoo/boot
 mount /dev/sda2 /mnt/gentoo/boot
 
 # copy stage tarball
-wget http://mirrors.aliyun.com/gentoo/releases/amd64/autobuilds/20160528/systemd/stage3-amd64-systemd-20160528.tar.bz2
-tar jxvpf stage3-amd64-systemd-20160528.tar.bz2 --xattrs -C /mnt/gentoo
+timestamp='20160603'
+wget http://mirrors.aliyun.com/gentoo/releases/amd64/autobuilds/${timestamp}/systemd/stage3-amd64-systemd-${timestamp}.tar.bz2
+tar jxvpf stage3-amd64-systemd-${timestamp}.tar.bz2 --xattrs -C /mnt/gentoo
 
 # set portage
 cat etc/portage/make.conf > /mnt/gentoo/etc/portage/make.conf
