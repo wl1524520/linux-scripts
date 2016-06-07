@@ -40,7 +40,7 @@ cat etc/default/grub > /etc/default/grub
 grub2-mkconfig -o /boot/grub/grub.cfg
 
 # set alias
-cp etc/profile.d/alias.sh /mnt/gentoo/etc/profile.d
+#cp etc/profile.d/alias.sh /mnt/gentoo/etc/profile.d
 
 # some packages
 emerge --ask \
