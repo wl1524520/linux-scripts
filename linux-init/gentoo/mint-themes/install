@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# get themes
+git clone https://github.com/linuxmint/cinnamon-themes ~/cinnamon-themes
+cp -R ~/cinnamon-themes/usr ~/
+rm -rf ~/usr/share/themes/Mint-X-*
+
+# get icons
+git clone https://github.com/linuxmint/mint-x-icons ~/mint-x-icons
+cp -R ~/mint-x-icons/usr ~/
+rm -rf ~/usr/share/icons/Mint-X-*
+
+# delete old themes
+sudo rm -rf /usr/share/themes/Mint-X
+sudo rm -rf "/usr/share/themes/Linux Mint"
+
+# delete old icons
+sudo rm -rf /usr/share/icons/Mint-X
+
+# install latest themes and icons
+sudo cp -R ~/usr /
+sudo gtk-update-icon-cache /usr/share/icons/Mint-X
