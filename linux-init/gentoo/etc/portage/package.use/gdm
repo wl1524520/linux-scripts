@@ -1,0 +1,4 @@
+# required by gnome-base/gnome-shell-3.18.3::gentoo
+# required by gnome-base/gdm-3.18.2::gentoo
+# required by gdm (argument)
+>=gnome-base/gnome-control-center-3.18.2 networkmanager

@@ -13,7 +13,7 @@ emerge --ask sys-kernel/genkernel-next
 cat etc/genkernel.conf > /etc/genkernel.conf
 
 # Kernel config file
-cp kernel.config/gentoo.config /usr/src/linux/.config
+cp kernel.config/latest.config /usr/src/linux/.config
 
 # build and install linux kernel
 cd /usr/src/linux && make && make modules_install && make install

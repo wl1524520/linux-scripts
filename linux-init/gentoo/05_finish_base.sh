@@ -5,11 +5,9 @@ cat etc/fstab > /etc/fstab
 
 # set hostname for systemd
 echo "gentoo" > /etc/hostname
+echo "127.0.0.1 gentoo.local gentoo" >> /etc/hosts
 
 emerge --ask --noreplace net-misc/netifrc
-
-# set root password
-passwd
 
 # set hwclock
 sed -i 's/clock="UTC"/clock="local"/g' /etc/conf.d/hwclock
@@ -39,12 +37,12 @@ grub2-install /dev/sda
 cat etc/default/grub > /etc/default/grub
 grub2-mkconfig -o /boot/grub/grub.cfg
 
-# set alias
-#cp etc/profile.d/alias.sh /mnt/gentoo/etc/profile.d
-
 # some packages
 emerge --ask \
     app-admin/sudo \
     app-editors/vim \
     app-shells/zsh \
     dev-vcs/git
+
+# set root password
+passwd root
