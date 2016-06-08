@@ -15,6 +15,9 @@ systemctl enable gdm.service
 systemctl disable dhcpcd.service
 systemctl enable NetworkManager
 
+# enable print service
+systemctl enable cups.service
+
 # Install Fonts
 emerge --ask media-fonts/noto media-fonts/droid wqy-zenhei wqy-microhei
 
