@@ -1,0 +1,29 @@
+# required by media-gfx/splashutils-1.5.4.4-r7::gentoo[truetype]
+# required by media-gfx/bootsplash-themes-20060913::gentoo
+# required by bootsplash-themes (argument)
+>=app-arch/bzip2-1.0.6-r7 static-libs
+# required by media-gfx/splashutils-1.5.4.4-r7::gentoo[truetype]
+# required by media-gfx/bootsplash-themes-20060913::gentoo
+# required by bootsplash-themes (argument)
+>=media-libs/freetype-2.6.3-r1 static-libs
+# required by media-gfx/splashutils-1.5.4.4-r7::gentoo[gpm]
+# required by media-gfx/bootsplash-themes-20060913::gentoo
+# required by bootsplash-themes (argument)
+>=sys-libs/gpm-1.20.7-r2 static-libs
+# required by media-gfx/splashutils-1.5.4.4-r7::gentoo
+# required by media-gfx/bootsplash-themes-20060913::gentoo
+# required by bootsplash-themes (argument)
+>=virtual/jpeg-0-r2:0 static-libs
+# required by media-gfx/splashutils-1.5.4.4-r7::gentoo[png]
+# required by media-gfx/bootsplash-themes-20060913::gentoo
+# required by bootsplash-themes (argument)
+>=media-libs/libpng-1.6.21 static-libs
+# required by virtual/jpeg-0-r2::gentoo
+# required by media-gfx/splashutils-1.5.4.4-r7::gentoo
+# required by media-gfx/bootsplash-themes-20060913::gentoo
+# required by bootsplash-themes (argument)
+>=media-libs/libjpeg-turbo-1.4.2 static-libs
+# required by media-gfx/splashutils-1.5.4.4-r7::gentoo[truetype,png]
+# required by media-gfx/bootsplash-themes-20060913::gentoo
+# required by bootsplash-themes (argument)
+>=sys-libs/zlib-1.2.8-r1 static-libs

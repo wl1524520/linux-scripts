@@ -36,6 +36,7 @@ emerge --ask firefox
 
 # Install backgrounds
 emerge --ask gnome-backgrounds
+emerge --ask gnome-shell
 
 exit
 
