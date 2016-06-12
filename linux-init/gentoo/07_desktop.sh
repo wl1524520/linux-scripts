@@ -19,14 +19,23 @@ systemctl enable NetworkManager
 systemctl enable cups.service
 
 # Install Fonts
-emerge --ask media-fonts/noto media-fonts/droid wqy-zenhei wqy-microhei
+emerge --ask media-fonts/noto
+emerge --ask \
+    media-fonts/arphicfonts \
+    media-fonts/bitstream-cyberbit \
+    media-fonts/droid \
+    media-fonts/ipamonafont \
+    media-fonts/ja-ipafonts \
+    media-fonts/takao-fonts \
+    media-fonts/wqy-microhei \
+    media-fonts/wqy-zenhei
+
 
 # Install Firefox
 emerge --ask firefox
 
 # Install backgrounds
 emerge --ask gnome-backgrounds
-emerge --ask gedit
 
 exit
 
