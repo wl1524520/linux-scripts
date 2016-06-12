@@ -1,14 +1,12 @@
 #!/bin/bash
 
-# get themes
-git clone https://github.com/linuxmint/cinnamon-themes ~/cinnamon-themes
-cp -R ~/cinnamon-themes/usr ~/
-rm -rf ~/usr/share/themes/Mint-X-*
+# get themes and icons tarball
+wget http://cdn.uniteyun.com/gentoo-mint-x.tar.gz
 
-# get icons
-git clone https://github.com/linuxmint/mint-x-icons ~/mint-x-icons
-cp -R ~/mint-x-icons/usr ~/
-rm -rf ~/usr/share/icons/Mint-X-*
+if [ $? -ne 0 ]; then
+    echo 'get themes and icons faild'
+    exit
+fi
 
 # delete old themes
 sudo rm -rf /usr/share/themes/Mint-X
@@ -18,5 +16,8 @@ sudo rm -rf "/usr/share/themes/Linux Mint"
 sudo rm -rf /usr/share/icons/Mint-X
 
 # install latest themes and icons
-sudo cp -R ~/usr /
+tar zxvf gentoo-mint-x.tar.gz -C /
 sudo gtk-update-icon-cache /usr/share/icons/Mint-X
+
+# copy gentoo logo
+sudo cp -f Gentoo_Linux_logo_matte.svg /usr/share/cinnamon/theme
