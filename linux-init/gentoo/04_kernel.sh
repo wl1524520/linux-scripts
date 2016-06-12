@@ -2,7 +2,8 @@
 
 cp etc/portage/package.accept_keywords /etc/portage/
 emerge --ask sys-kernel/dracut
-echo 'add_dracutmodules+="usrmount"' > /etc/dracut/dracut.conf
+#echo 'add_dracutmodules+="usrmount"' > /etc/dracut/dracut.conf
+#echo 'add_dracutmodules+="plymouth"' >> /etc/dracut.conf
 
 # btrfs filesystem support
 emerge --ask sys-fs/btrfs-progs
