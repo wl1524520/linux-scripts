@@ -4,6 +4,9 @@ cp etc/portage/package.accept_keywords /etc/portage/
 emerge --ask sys-kernel/dracut
 echo 'add_dracutmodules+="usrmount"' > /etc/dracut/dracut.conf
 
+# btrfs filesystem support
+emerge --ask sys-fs/btrfs-progs
+
 emerge --ask sys-apps/pciutils
 emerge --ask sys-kernel/gentoo-sources
 
