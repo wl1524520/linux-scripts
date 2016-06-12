@@ -18,4 +18,4 @@ app-i18n/fcitx X table nls gtk3
 media-video/vlc qt4 x265 faad
 
 # gnome-terminal
-x11-terms/gnome-terminal -nautilus -gnome-shell
+x11-terms/gnome-terminal -gnome-shell
