@@ -38,4 +38,5 @@ gpasswd -a wilson cdrom
 gpasswd -a wilson video
 gpasswd -a wilson usb
 gpasswd -a wilson plugdev
+#echo 'wilson:www.wanglu.info' | chpasswd
 passwd wilson
