@@ -31,6 +31,10 @@ systemctl enable sshd.service
 emerge --ask net-misc/dhcpcd
 systemctl enable dhcpcd.service
 
+# Install ntp
+emerge --ask net-misc/ntp
+systemctl enable ntpd.service
+
 # set bootloader
 emerge --ask sys-boot/grub:2
 grub2-install /dev/sda
