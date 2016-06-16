@@ -15,6 +15,9 @@ systemctl enable gdm.service
 systemctl disable dhcpcd.service
 systemctl enable NetworkManager
 
+# Install gentoolkit
+emerge --ask app-portage/gentoolkit
+
 # enable print service
 systemctl enable cups.service
 
