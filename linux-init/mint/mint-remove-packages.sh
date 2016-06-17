@@ -13,4 +13,8 @@ sudo apt-get -y purge transmission*
 sudo apt-get -y purge brasero*
 sudo apt-get -y purge simple-scan
 sudo apt-get -y purge gnome-orca
+
+# Uninstall dmraid
+sudo apt-get -y purge dmraid
+
 sudo apt-get -y autoremove
