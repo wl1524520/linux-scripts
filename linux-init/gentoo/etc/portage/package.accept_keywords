@@ -28,3 +28,5 @@
 >=gnome-extra/cinnamon-session-3.0.0 ~amd64
 >=gnome-extra/cinnamon-settings-daemon-3.0.0 ~amd64
 >=gnome-extra/cinnamon-translations-3.0.0 ~amd64
+>=gnome-extra/nemo-3.0.0 ~amd64
+
