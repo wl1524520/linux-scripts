@@ -1,0 +1,4 @@
+app-eselect/eselect-php fpm
+#dev-lang/php:5.6 fpm curl gd mysql zip
+#dev-lang/php:7.0 fpm curl gd mysql mysqli zip
+dev-lang/php fpm curl gd mysql mysqli zip
