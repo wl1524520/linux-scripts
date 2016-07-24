@@ -1,0 +1,4 @@
+libxml2
+libxml2-dev
+libxslt ?
+libxslt-dev ?
