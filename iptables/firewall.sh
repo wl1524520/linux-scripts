@@ -127,9 +127,9 @@ sudo iptables -A INPUT  -p tcp --sport 3306 -m state --state ESTABLISHED     -j 
 sudo iptables -A INPUT  -p tcp --dport 465 -j ACCEPT
 sudo iptables -A OUTPUT -p tcp --dport 465 -j ACCEPT
 
-# Allow 192.168.42.0/24 访问
-sudo iptables -A INPUT -s 192.168.42.0/24 -j ACCEPT
-sudo iptables -A OUTPUT -d 192.168.42.0/24 -j ACCEPT
+# Allow 192.168.0.0/24 访问
+sudo iptables -A INPUT -s 192.168.0.0/20 -j ACCEPT
+sudo iptables -A OUTPUT -d 192.168.0.0/20 -j ACCEPT
 
 # Drop everything that doesn't match the above
 sudo iptables -A INPUT   -j DROP
