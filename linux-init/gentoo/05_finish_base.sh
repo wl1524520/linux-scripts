@@ -48,5 +48,8 @@ emerge --ask \
     app-shells/zsh \
     dev-vcs/git
 
+# ping
+chmod u+s /bin/ping
+
 # set root password
 passwd root
