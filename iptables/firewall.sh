@@ -79,12 +79,20 @@ sudo iptables -A OUTPUT -p tcp --sport 22 -m state --state ESTABLISHED     -j AC
 sudo iptables -A OUTPUT -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
 sudo iptables -A INPUT  -p tcp --sport 22 -m state --state ESTABLISHED     -j ACCEPT
 
+# 8022 docker
 # incomming rules
 sudo iptables -A INPUT  -p tcp --dport 8022 -m state --state NEW,ESTABLISHED -j ACCEPT
 sudo iptables -A OUTPUT -p tcp --sport 8022 -m state --state ESTABLISHED     -j ACCEPT
 # outcomming rules
 sudo iptables -A OUTPUT -p tcp --dport 8022 -m state --state NEW,ESTABLISHED -j ACCEPT
 sudo iptables -A INPUT  -p tcp --sport 8022 -m state --state ESTABLISHED     -j ACCEPT
+# 4306 docker
+# incomming rules
+sudo iptables -A INPUT  -p tcp --dport 4306 -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --sport 4306 -m state --state ESTABLISHED     -j ACCEPT
+# outcomming rules
+sudo iptables -A OUTPUT -p tcp --dport 4306 -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT  -p tcp --sport 4306 -m state --state ESTABLISHED     -j ACCEPT
 
 # Allow dns to work
 sudo iptables -A OUTPUT -p udp --sport 1024:65535 --dport 53 -m state --state NEW,ESTABLISHED -j ACCEPT
