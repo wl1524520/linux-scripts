@@ -5,14 +5,14 @@
 ##########################################
 
 # uninstall some unuseful packages
-sudo apt-get -y purge pidgin*
-sudo apt-get -y purge thunderbird*
-sudo apt-get -y purge hexchat*
-sudo apt-get -y purge tomboy
-sudo apt-get -y purge transmission*
-sudo apt-get -y purge brasero*
-sudo apt-get -y purge simple-scan
-sudo apt-get -y purge gnome-orca
+sudo apt-get -y purge pidgin* \
+                    thunderbird* \
+                    hexchat* \
+                    tomboy \
+                    transmission* \
+                    brasero* \
+                    simple-scan \
+                    gnome-orca
 
 # Uninstall dmraid
 sudo apt-get -y purge dmraid

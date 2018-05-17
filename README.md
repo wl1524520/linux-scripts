@@ -10,8 +10,3 @@ Linux常用脚本集合
 ###3) iptables
 [iptables防火墙规则](./iptables)
 
-###4) vimrcs
-[vim的一些增强配置](./vimrcs/vimrc.vim)
-
-###5) wps-font
-[wps字体安装设置](./wps-fonts)
