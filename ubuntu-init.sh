@@ -2,6 +2,7 @@ apt install supervisor nginx \
     php-common \
     php-cli \
     php-fpm \
+    php-bcmath \
     php-mysql \
     php-pgsql \
     php-geoip \
