@@ -1,5 +1,5 @@
-apt-get update \
-    && apt-get install -y nginx php7.4-fpm php7.4-cli php7.4-dev \
+sudo apt-get update \
+    && sudo apt-get install -y nginx php7.4-fpm php7.4-cli php7.4-dev \
        php7.4-pgsql php7.4-sqlite3 php7.4-gd \
        php7.4-curl php7.4-memcached \
        php7.4-imap php7.4-mysql php7.4-mbstring \
