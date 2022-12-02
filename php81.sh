@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt-get install php8.1-cli php8.1-dev \
+sudo apt-get install php8.1-cli php8.1-dev \
        php8.1-pgsql php8.1-sqlite3 php8.1-gd \
        php8.1-curl php8.1-memcached \
        php8.1-imap php8.1-mysql php8.1-mbstring \
