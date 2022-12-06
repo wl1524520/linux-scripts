@@ -1,9 +1,0 @@
->=app-arch/bzip2-1.0.6-r7 static-libs
->=media-libs/freetype-2.6.3-r1 static-libs
->=sys-libs/gpm-1.20.7-r2 static-libs
->=virtual/jpeg-0-r2:0 static-libs
->=media-libs/libpng-1.6.21 static-libs
->=media-libs/libjpeg-turbo-1.4.2 static-libs
->=sys-libs/zlib-1.2.8-r1 static-libs
-
->=x11-libs/libdrm-2.4.65 libkms
